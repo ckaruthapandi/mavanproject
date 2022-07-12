@@ -18,7 +18,7 @@ pipeline {
 	     stage('artifact upload to S3') {
 		steps {
 		sh '''
-		cd target/
+		cd /home/ubuntu/maven/mavanproject/mavenproject/target/
 		aws s3 cp *.war s3://karuthapandi/
 		sh aws s3 ls s3://karuthapandi
 		sh '''
