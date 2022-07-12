@@ -19,7 +19,7 @@ pipeline {
 		steps {
 			sh '''
 			cd /home/ubuntu/maven/mavanproject/mavenproject/target/ 
-			aws s3 cp s3://karuthapandi/*.war  --region ap-south-1
+			aws s3 cp *.war s3://karuthapandi/ 
     			sh "aws s3 ls "
 			sh '''
 			}
