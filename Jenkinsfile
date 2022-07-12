@@ -17,8 +17,11 @@ pipeline {
             }
 	     stage('artifact upload to S3') {
 		try {
-			withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
+			sh '''
+			cd /home/ubuntu/maven/mavanproject/mavenproject/target/ 
+			aws s3 cp s3://karuthapandi/*.war  --region ap-south-1
     			sh "aws s3 ls "
+			sh '''
 			}	
 		    }catch(err) {
 			sh "echo error sending to artifact"
