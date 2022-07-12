@@ -10,7 +10,7 @@ pipeline {
              stage('build') { 
                 steps {
                     sh '''
-                    cd /home/ubuntu/maven/mavenproject
+                    cd /home/ubuntu/maven/mavanproject/mavenproject
                     mvn install
                     '''
                 }
