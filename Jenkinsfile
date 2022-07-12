@@ -18,7 +18,7 @@ pipeline {
 	     stage('artifact upload to S3') {
 		steps {
 			aws s3 ls s3://karuthapandi/
-}
-			}
+		}
+            }
 	}
 }
