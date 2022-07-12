@@ -18,7 +18,7 @@ pipeline {
 	     stage('artifact') {
 		try {
 			withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
-			sh "aws s3 ls "
+    			sh "aws s3 ls "
 			}	
 		}catch(err) {
 			sh "echo error sending to artifact"
