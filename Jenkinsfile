@@ -17,8 +17,7 @@ pipeline {
             }
 	     stage('artifact upload to S3') {
 		steps {
-			withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
-			s3Upload bucket: 'karuthapandi', file: 'pom.xml'
+			aws s3 ls s3://karuthapandi/
 }
 			}
 	}
